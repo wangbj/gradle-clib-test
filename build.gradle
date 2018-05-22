@@ -1,0 +1,21 @@
+apply plugin: "c"
+
+model {
+    components {
+        preload(NativeLibrarySpec) { }
+
+	main(NativeExecutableSpec) {
+            sources {
+		c.lib library: "preload"
+            }
+	}
+    }    
+    binaries {
+	withType(NativeExecutableBinarySpec) {
+            if (targetPlatform.operatingSystem.linux) {
+		cCompiler.args '-pthread'
+		linker.args '-pthread'
+            }
+	}
+    }
+}
