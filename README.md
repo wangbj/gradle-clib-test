@@ -8,7 +8,7 @@ This is just a project template how to build shared libraries and (main) executa
 and
 
 ```shell
-LD_LIBRARY_PATH=bulid/libs/*preload*/shared build/exe/main/main
+LD_LIBRARY_PATH=bulid/libs/preload/shared build/exe/main/main
 ```
 
 to run the main executable.
