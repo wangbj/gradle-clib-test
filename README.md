@@ -16,7 +16,7 @@ to run the main executable.
 or
 
 ```shell
-LD_PRELOAD=bulid/libs/preload/shared /path/to/executable
+LD_PRELOAD=bulid/libs/preload/shared/libpreload.so /path/to/executable
 ```
 
 to run `/path/to/executable` with LD_PRELOAD.
