@@ -12,3 +12,11 @@ LD_LIBRARY_PATH=bulid/libs/preload/shared build/exe/main/main
 ```
 
 to run the main executable.
+
+or
+
+```shell
+LD_PRELOAD=bulid/libs/preload/shared /path/to/executable
+```
+
+to run `/path/to/executable` with LD_PRELOAD.
