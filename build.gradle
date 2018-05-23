@@ -14,7 +14,13 @@ model {
 	withType(NativeExecutableBinarySpec) {
             if (targetPlatform.operatingSystem.linux) {
 		cCompiler.args '-pthread'
-		linker.args '-pthread'
+		linker.args '-pthread', '-lpthread', '-ldl'
+            }
+	}
+	withType(SharedLibraryBinarySpec) {
+            if (targetPlatform.operatingSystem.linux) {
+		cCompiler.args '-pthread'
+		linker.args '-pthread', '-lpthread', '-ldl'
             }
 	}
     }
